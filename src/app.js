@@ -39,8 +39,20 @@ app.get('/help', (req, res) => {
     })
 })
 
+app.get('/help/*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        author: 'Yang Hu',
+        errorMessage: 'Helper article not found.'
+    })
+})
+
 app.get('*', (req, res) => {
-    res.send('404 Page not found!')
+    res.render('404', {
+        title: '404',
+        author: 'Yang Hu',
+        errorMessage: 'Page not found.',
+    })
 })
 
 app.listen(4000, () => {
