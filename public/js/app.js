@@ -1,0 +1,1 @@
+console.log('test if client side js is loaded...')
