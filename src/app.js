@@ -54,8 +54,10 @@ app.get("/api/weather", (req, res) => {
           error
         });
       }
+      const forecastString = `Temperature: ${forecastData.temperature},
+                            Probability to rain: ${forecastData.precipitation}`;
       return res.send({
-        forecast: forecastData,
+        forecast: forecastString,
         location: location,
         address: req.query.address
       });

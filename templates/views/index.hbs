@@ -5,12 +5,19 @@
         <title>Weather</title>
         <link rel="icon" href="/img/icon.png">
         <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/app.js"></script>
+        <script src="/js/app.js" defer></script>
     </head>
     <body>
         <div class="main-content">
             {{>header}}
             <p>Use this site to get your weather!</p>
+            <form>
+                <input placeholder="Address">
+                <button>Search</button>
+            </form>
+
+            <p id="status-message"></p>
+            <p id="forecast-result"></p>
         </div>
 
         {{>footer}}
